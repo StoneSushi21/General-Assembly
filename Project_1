@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+  <style>
+    body {
+      text-align: center;
+    }
+    eaten {
+      font-size: 0px;
+    }
+    delayed {
+      font-size: 0px;
+    }
+ 
+  
+  </style>
+</head>
+
+
+<body> 
+
+  <h1>Welcome to the burger eating simulator!</h1>
+
+  <img id="pic" src=https://twisper.com/wp-content/uploads/2020/03/close-up-photo-of-burger-3915906-scaled.jpg height=300px
+  onclick="when_click()" ></img>
+
+  <h2>
+    <button id="button" onclick="eat()">Eat Burger</button>
+  </h2>
+    <eaten id="eaten">
+      <h1>Congratulations!</h1>
+      <h3>You ate the burger!</h3>
+    </eaten>
+   <delayed id="delayed">If you thought this had any point, you were wrong!</delayed>
+ 
+
+
+<script>
+  function eat() {
+    document.getElementById("pic").height = 0;
+    document.getElementById("eaten").style.fontSize = "34px";
+    document.getElementById("button").style.color = "white";
+    document.getElementById("button").style.background = "white";
+    document.getElementById("button").style.border = "white";
+    
+    setTimeout(delayed, 1000) 
+    
+  }
+  
+  function delayed(){
+    document.getElementById("delayed").style.fontSize = "22px";
+  }
+ 
+</script>
+ 
+
+</body>   
